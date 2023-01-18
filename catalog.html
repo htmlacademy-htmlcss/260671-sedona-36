@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Academy: Седона</title>
+</head>
+<body>
+  <header class="page-header">
+    <nav class="main-navigation">
+      <ul class="main-navigation--list">
+        <li class="main-navigation--item">Главная</li>
+        <li class="main-navigation--item">О седоне</li>
+        <li class="main-navigation--item">Гостиницы</li>
+      </ul>
+    </nav>
+    <div class="user-menu">
+      <button class="user-menu__btn user-menu__btn--search">
+        <span class="visually-hidden">Поиск</span>
+      </button>
+      <button class="user-menu__btn user-menu__btn--favorites">
+        <span class="visually-hidden">Избранное</span>
+      </button>
+      <button class="user-menu__btn user-menu__btn--popover">Хочу сюда!</button>
+    </div>
+  </header>
+  <main class="catalog-content">
+    <h1 class="visually-hidden"></h1>
+    <section class="filter">
+      <h2 class="filter__title">Гостиницы Седоны</h2>
+      <ul class="filter__breadcrumbs">
+        <li class="filter__breadcrumbs-item"></li>
+      </ul>
+      <form class="filter__form" action="https://echo.htmlacademy.ru/">
+        <fieldset class="filter__form--infrastructure infrastructure">
+          <legend class="infrastructure__title"></legend>
+          <ul class="infrastructure__list">
+            <li class="infrastructure__item">
+              <label class="infrastructure__label-checkbox" for="infrastructure-1">
+                <input class="visually-hidden infrastructure__input" type="checkbox" name="infrastructure" id="infrastructure-1" value="1" checked>
+                <span class="infrastructure__mark"></span>
+                <span class="infrastructure__label">Бассейн</span>
+              </label>
+            </li>
+            <li class="infrastructure__item">
+              <label class="infrastructure__label-checkbox" for="infrastructure-2">
+                <input class="visually-hidden infrastructure__input" type="checkbox" name="infrastructure" id="infrastructure-2" value="2" checked>
+                <span class="infrastructure__mark"></span>
+                <span class="infrastructure__label">Парковка</span>
+              </label>
+            </li>
+            <li class="infrastructure__item">
+              <label class="infrastructure__label-checkbox" for="infrastructure-3">
+                <input class="visually-hidden infrastructure__input" type="checkbox" name="infrastructure" id="infrastructure-3" value="3">
+                <span class="infrastructure__mark"></span>
+                <span class="infrastructure__label">Wi-Fi</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filter__form--housing housing">
+          <legend class="housing__title"></legend>
+          <ul class="housing__list">
+            <li class="housing__item">
+              <label class="housing__label-radio" for="housing-1">
+                <input class="visually-hidden housing__input" type="radio" name="housing" id="housing-1" value="1" checked>
+                <span class="housing__mark"></span>
+                <span class="housing__label">Гостиница</span>
+              </label>
+            </li>
+            <li class="housing__item">
+              <label class="housing__label-radio" for="housing-2">
+                <input class="visually-hidden housing__input" type="radio" name="housing" id="housing-2" value="2">
+                <span class="housing__mark"></span>
+                <span class="housing__label">Мотель</span>
+              </label>
+            </li>
+            <li class="housing__item">
+              <label class="housing__label-radio" for="housing-3">
+                <input class="visually-hidden housing__input" type="radio" name="housing" id="housing-3" value="3">
+                <span class="housing__mark"></span>
+                <span class="housing__label">Апартаменты</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filter__form--price price">
+          <legend class="price__title">Стоимость, ₽:</legend>
+          <input class="price__input--from" type="text">
+          <input class="price__input--to" type="text">
+          <input class="price__input--range" type="range">
+        </fieldset>
+        <button class="filter__form--submit">Применить</button>
+        <button class="filter__form--reset">Сбросить</button>
+      </form>
+    </section>
+    <section class="products">
+      <h2 class="visually-hidden">Гостиницы</h2>
+      <div class="products__header">
+        <p class="products__header--text">Найдено гостиниц: 38</p>
+        <select class="select-control" aria-label="Сортировка">
+          <option value="cheap">Сначала дешёвые</option>
+          <option value="popular">Сначала популярные</option>
+          <option value="expensive">Сначала дорогие</option>
+        </select>
+        <ul class="products__view--list">
+          <li class="products__view--item">
+            <button class="products__view--btn" type="button">
+              <span class="visually-hidden">Плитка</span>
+            </button>
+          </li>
+          <li class="products__view--item">
+            <button class="products__view--btn" type="button">
+              <span class="visually-hidden">Карточка</span>
+            </button>
+          </li>
+          <li class="products__view--item">
+            <button class="products__view--btn" type="button">
+              <span class="visually-hidden">Список</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <ul class="products__list">
+        <li class="products__item product-card">
+          <h3 class="product-card__title">Amara Resort & Spa</h3>
+          <img src="" alt="" class="product-card__img" width="300" height="212">
+          <div class="product-card__container">
+            <span class="product-card__housing">Гостиница</span>
+            <span class="product-card__price">От 4000 ₽</span>
+            <button class="btn-primary" type="button">Подробнее</button>
+            <button class="btn-secondary">В избранное</button>
+            <span class="product-card__stars"></span>
+            <span class="product-card__rating">Рейтинг: 8,5</span>
+          </div>
+        </li>
+        <li class="products__item product-card">
+          <h3 class="product-card__title">Villas at Poco Diablo</h3>
+          <img src="" alt="" class="product-card__img" width="300" height="212">
+          <div class="product-card__container">
+            <span class="product-card__housing">Гостиница</span>
+            <span class="product-card__price">От 5000 ₽</span>
+            <button class="btn-primary" type="button">Подробнее</button>
+            <button class="btn-secondary">В избранном</button>
+            <span class="product-card__stars"></span>
+            <span class="product-card__rating">Рейтинг: </span>
+          </div>
+        </li>
+        <li class="products__item product-card">
+          <h3 class="product-card__title">Desert Quail Inn</h3>
+          <img src="" alt="" class="product-card__img" width="300" height="212">
+          <div class="product-card__container">
+            <span class="product-card__housing">Гостиница</span>
+            <span class="product-card__price">От 2500 ₽</span>
+            <button class="btn-primary" type="button">Подробнее</button>
+            <button class="btn-secondary">В избранное</button>
+            <span class="product-card__stars"></span>
+            <span class="product-card__rating">Рейтинг: </span>
+          </div>
+        </li>
+        <li class="products__item product-card">
+          <h3 class="product-card__title">GreenTree Inn</h3>
+          <img src="" alt="" class="product-card__img" width="300" height="212">
+          <div class="product-card__container">
+            <span class="product-card__housing">Гостиница</span>
+            <span class="product-card__price">От 1500 ₽</span>
+            <button class="btn-primary" type="button">Подробнее</button>
+            <button class="btn-secondary">В избранное</button>
+            <span class="product-card__stars"></span>
+            <span class="product-card__rating">Рейтинг: </span>
+          </div>
+        </li>
+      </ul>
+      <ol class="products__pagination">
+        <li class="products__pagination-item">
+          <a href="" class="products__pagination-link">1</a>
+        </li>
+        <li class="products__pagination-item">
+          <a href="" class="products__pagination-link">2</a>
+        </li>
+        <li class="products__pagination-item">
+          <a href="" class="products__pagination-link">3</a>
+        </li>
+        <li class="products__pagination-item">
+          <a href="" class="products__pagination-link">4</a>
+        </li>
+        <li class="products__pagination-item">
+          <a href="" class="products__pagination-link">10</a>
+        </li>
+      </ol>
+    </section>
+    <section class="newsletter">
+      <h2 class="newsletter__title">Подпишитесь на рассылку</h2>
+      <p class="newsletter__text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+      <form action="https://echo.htmlacademy.ru/" class="newsletter__form">
+        <input type="email" name="user-email-field" id="user-email" placeholder="Ваш e-mail">
+        <button class="newsletter__btn btn__secondary" type="submit">Подписаться</button>
+      </form>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <ul class="page-footer__social">
+      <li class="page-footer__social-item"></li>
+      <li class="page-footer__social-item"></li>
+      <li class="page-footer__social-item"></li>
+    </ul>
+    <a class="page-footer__tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
+    <a href="https://htmlacademy.ru/" class="page-footer__developer">
+      <img src="img/developer-logo.svg" alt="HTML academy" class="page-footer__developer--logo">
+    </a>
+  </footer>
+</body>
+</html>
