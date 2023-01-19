@@ -6,11 +6,14 @@
   </head>
   <body>
     <header class="page-header">
+      <a class="main-logo" href="#">
+        <img class="main-logo__img" src="logo.svg" alt="Логотип Седоны">
+      </a>
       <nav class="main-navigation">
         <ul class="main-navigation--list">
-          <li class="main-navigation--item">Главная</li>
-          <li class="main-navigation--item">О седоне</li>
-          <li class="main-navigation--item">Гостиницы</li>
+          <li class="main-navigation--item"><a class="main-navigation__link" href="#">Главная</a></li>
+        <li class="main-navigation--item"><a class="main-navigation__link" href="#">О седоне</a></li>
+        <li class="main-navigation--item"><a class="main-navigation__link" href="catalog.html">Гостиницы</a></li>
         </ul>
       </nav>
       <div class="user-menu">
@@ -67,23 +70,15 @@
           <li class="advantages__item advantages__item--secondary">
             <h3 class="advantages__title advantages__title--secondary">Жилье</h3>
             <p class="advantages__text advantages__text--secondary">Рекомендуем пожить в настоящем &nbsp;мотеле, все как в кино!</p>
-            <svg class="advantages__icon--features" width="75" height="73">
-              <use xlink:href="#house-icon"></use>
-            </svg>
           </li>
           <li class="advantages__item advantages__item--secondary">
             <h3 class="advantages__title advantages__title--secondary">Еда</h3>
             <p class="advantages__text advantages__text--secondary">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР,&nbsp;Вы НЕ разочаруетесь!</p>
-            <svg class="advantages__icon--features" width="77" height="69">
-              <use xlink:href="#burger-icon"></use>
-            </svg>
           </li>
           <li class="advantages__item advantages__item--secondary">
             <h3 class="advantages__title advantages__title--secondary">Сувениры</h3>
             <p class="advantages__text advantages__text--secondary">Не только китайского, &nbsp;но и местного производства!</p>
-            <svg class="advantages__icon--features" width="63" height="76">
-              <use xlink:href="#gift-icon"></use>
-            </svg>
+          </li>
         </ul>
       </section>
       <section class="offer">
