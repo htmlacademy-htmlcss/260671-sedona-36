@@ -38,8 +38,8 @@
           <li class="filter__breadcrumbs-item"></li>
         </ul>
         <form class="filter__form" action="https://echo.htmlacademy.ru/">
-          <fieldset class="filter__form--infrastructure infrastructure">
-            <legend class="infrastructure__title"></legend>
+          <fieldset class="filter__fieldset filter__fieldset--infrastructure infrastructure">
+            <legend class="filter__legend infrastructure__title">Инфраструктура</legend>
             <ul class="infrastructure__list">
               <li class="infrastructure__item">
                 <label class="infrastructure__label-checkbox" for="infrastructure-1">
@@ -64,8 +64,8 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="filter__form--housing housing">
-            <legend class="housing__title"></legend>
+          <fieldset class="filter__fieldset filter__fieldset--housing housing">
+            <legend class="filter__legend housing__title">Тип жилья</legend>
             <ul class="housing__list">
               <li class="housing__item">
                 <label class="housing__label-radio" for="housing-1">
@@ -90,14 +90,16 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="filter__form--price price">
-            <legend class="price__title">Стоимость, ₽:</legend>
+          <fieldset class="filter__fieldset filter__fieldset--price price">
+            <legend class="filter__legend price__title">Стоимость, ₽:</legend>
             <input class="price__input--from" type="text">
             <input class="price__input--to" type="text">
             <input class="price__input--range" type="range">
           </fieldset>
-          <button class="filter__form--submit">Применить</button>
-          <button class="filter__form--reset">Сбросить</button>
+          <div class="filter__buttons-wrapper">
+            <button class="filter__form--submit btn-secondary">Применить</button>
+            <button class="filter__form--reset">Сбросить</button>
+          </div>
         </form>
       </section>
       <section class="products">
@@ -111,17 +113,17 @@
           </select>
           <ul class="products__view--list">
             <li class="products__view--item">
-              <button class="products__view--btn" type="button">
+              <button class="products__view--btn products__view--btn--tile" type="button">
                 <span class="visually-hidden">Плитка</span>
               </button>
             </li>
             <li class="products__view--item">
-              <button class="products__view--btn" type="button">
+              <button class="products__view--btn products__view--btn--card" type="button">
                 <span class="visually-hidden">Карточка</span>
               </button>
             </li>
             <li class="products__view--item">
-              <button class="products__view--btn" type="button">
+              <button class="products__view--btn products__view--btn--list" type="button">
                 <span class="visually-hidden">Список</span>
               </button>
             </li>
@@ -131,55 +133,47 @@
           <li class="products__item product-card">
             <h3 class="product-card__title">Amara Resort & Spa</h3>
             <img src="img/product-1.jpg" alt="" class="product-card__img" width="300" height="212">
-            <div class="product-card__container">
               <span class="product-card__housing">Гостиница</span>
               <span class="product-card__price">От 4000 ₽</span>
               <button class="btn-primary" type="button">Подробнее</button>
               <button class="btn-secondary">В избранное</button>
               <span class="product-card__stars"></span>
               <span class="product-card__rating">Рейтинг: 8,5</span>
-            </div>
           </li>
           <li class="products__item product-card">
             <h3 class="product-card__title">Villas at Poco Diablo</h3>
             <img src="img/product-2.jpg" alt="" class="product-card__img" width="300" height="212">
-            <div class="product-card__container">
               <span class="product-card__housing">Гостиница</span>
               <span class="product-card__price">От 5000 ₽</span>
               <button class="btn-primary" type="button">Подробнее</button>
               <button class="btn-secondary">В избранном</button>
               <span class="product-card__stars"></span>
               <span class="product-card__rating">Рейтинг: </span>
-            </div>
           </li>
           <li class="products__item product-card">
             <h3 class="product-card__title">Desert Quail Inn</h3>
             <img src="img/product-3.jpg" alt="" class="product-card__img" width="300" height="212">
-            <div class="product-card__container">
               <span class="product-card__housing">Гостиница</span>
               <span class="product-card__price">От 2500 ₽</span>
               <button class="btn-primary" type="button">Подробнее</button>
               <button class="btn-secondary">В избранное</button>
               <span class="product-card__stars"></span>
               <span class="product-card__rating">Рейтинг: </span>
-            </div>
           </li>
           <li class="products__item product-card">
             <h3 class="product-card__title">GreenTree Inn</h3>
             <img src="img/product-4.jpg" alt="" class="product-card__img" width="300" height="212">
-            <div class="product-card__container">
               <span class="product-card__housing">Гостиница</span>
               <span class="product-card__price">От 1500 ₽</span>
               <button class="btn-primary" type="button">Подробнее</button>
               <button class="btn-secondary">В избранное</button>
               <span class="product-card__stars"></span>
               <span class="product-card__rating">Рейтинг: </span>
-            </div>
           </li>
         </ul>
         <ol class="products__pagination">
-          <li class="products__pagination-item">
-            <a href="#" class="products__pagination-link">1</a>
+          <li class="products__pagination-item products__pagination-item--current">
+            <a href="#" class="products__pagination-link products__pagination-link--current">1</a>
           </li>
           <li class="products__pagination-item">
             <a href="#" class="products__pagination-link">2</a>
@@ -190,17 +184,20 @@
           <li class="products__pagination-item">
             <a href="#" class="products__pagination-link">4</a>
           </li>
+          <li class="products__pagination-item products__pagination-item--ellipses">
+            <a href="#" class="products__pagination-link products__pagination-link--ellipses">...</a>
+          </li>
           <li class="products__pagination-item">
             <a href="#" class="products__pagination-link">10</a>
           </li>
         </ol>
       </section>
-      <section class="newsletter">
-        <h2 class="newsletter__title">Подпишитесь на рассылку</h2>
-        <p class="newsletter__text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+      <section class="newsletter newsletter__catalog">
+        <h2 class="newsletter__title newsletter__title--catalog">Подпишитесь на рассылку</h2>
+        <p class="newsletter__text newsletter__text--catalog">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form action="https://echo.htmlacademy.ru/" class="newsletter__form">
           <input class="newsletter__input newsletter__input--catalog" type="email" name="user-email-field" id="user-email" placeholder="Ваш e-mail">
-          <button class="newsletter__btn btn__secondary" type="submit">Подписаться</button>
+          <button class="newsletter__btn newsletter__btn--catalog btn-secondary" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
