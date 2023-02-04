@@ -129,6 +129,38 @@
           <img src="img/developer.svg" alt="HTML academy" class="page-footer__developer--logo">
         </a>
       </footer>
+      <div class="modal-container modal-js">
+        <div class="modal modal-find">
+          <button class="modal__btn">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+          <section class="modal__content">
+            <h2 class="modal__title">Поиск гостиницы в Седоне</h2>
+            <form action="https://echo.htmlacademy.ru/" class="modal__form order">
+              <fieldset class="order__fieldset">
+                <label for="" class="order__label order__label--visit">Дата заезда:
+                  <input type="date" class="order__input order__input--visit">
+                </label>
+              </fieldset>
+              <fieldset class="order__fieldset">
+                <label for="" class="order__label order__label--leave">Дата выезда:
+                  <input type="date" class="order__input order__input--leave">
+                </label>
+              </fieldset>
+              <fieldset class="order__fieldset order__fieldset--visitor">
+                <label for="" class="order__label order__label--adult">Взрослые:
+                  <input type="text" class="order__input order__input--adult">
+                </label>
+                <label for="" class="order__label order__label--children">Дети:
+                  <input type="text" class="order__input order__input--children">
+                </label>
+              </fieldset>
+              <button class="order__btn btn-secondary">Найти</button>
+            </form>
+          </section>
+        </div>
+      </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

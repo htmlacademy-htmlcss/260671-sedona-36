@@ -10,3 +10,20 @@ favoriteButtons.forEach(item => {
     item.classList.contains('favorite-js') ? item.textContent = 'В избранном' : item.textContent = 'В избранное';
   });
 });
+
+// MODAL WINDOW
+const modalOpenButton = document.querySelector(".user-menu__btn--popover");
+const modal = document.querySelector(".modal-container");
+const modalCloseButton = document.querySelector(".modal__btn");
+
+const modalOpen = () => {
+  modal.style.display= "flex";
+  modalCloseButton.addEventListener("click", modalClose);
+}
+
+const modalClose = () => {
+  modal.style.display= "none";
+  modalCloseButton.removeEventListener("click", modalClose);
+}
+
+modalOpenButton.addEventListener("click", modalOpen);
