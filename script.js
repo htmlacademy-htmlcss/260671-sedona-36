@@ -12,7 +12,7 @@ favoriteButtons.forEach(item => {
 });
 
 // MODAL WINDOW
-const modalOpenButton = document.querySelector(".user-menu__btn--popover");
+const modalOpenButton = document.querySelectorAll(".modal-open-js");
 const modal = document.querySelector(".modal-container");
 const modalCloseButton = document.querySelector(".modal__btn");
 
@@ -26,7 +26,9 @@ const modalClose = () => {
   modalCloseButton.removeEventListener("click", modalClose);
 }
 
-modalOpenButton.addEventListener("click", modalOpen);
+modalOpenButton.forEach((item) => {
+  item.addEventListener("click", modalOpen);
+});
 
 // TOOLTIP
 
