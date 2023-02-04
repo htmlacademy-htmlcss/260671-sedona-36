@@ -27,3 +27,15 @@ const modalClose = () => {
 }
 
 modalOpenButton.addEventListener("click", modalOpen);
+
+// TOOLTIP
+
+const tooltipButton = document.querySelector(".tooltip__btn");
+const tooltipText = document.querySelector(".tooltip__text");
+
+const tooltipShow = () => {
+  tooltipText.style.display = "block";
+  setTimeout(() => {tooltipText.style.display = "none"}, "3000");
+}
+
+tooltipButton.addEventListener("click", tooltipShow);
