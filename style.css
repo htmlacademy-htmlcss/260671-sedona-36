@@ -495,13 +495,18 @@ padding: 64px;
 .newsletter__input {
   width: 452px;
   margin: 0;
-  padding: 14px 20px;
+  padding: 13px 20px 12px;
   border: none;
   background-color: #F2F2F2;
   border-radius: 4px 0 0 4px;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 24px;
   box-sizing: border-box;
+}
+
+.newsletter__input::placeholder {
+
 }
 
 .newsletter__btn {
@@ -518,8 +523,9 @@ padding: 64px;
 .page-footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   min-height: 120px;
-  padding: 45px 70px 35px;
+  padding: 40px 70px 30px;
   box-sizing: border-box;
 }
 
@@ -531,27 +537,46 @@ padding: 64px;
 }
 
 .page-footer__social-link {
-  display: flex;
+  display: block;
   width: 47px;
   height: 40px;
+  fill: #83B3D3;
+  box-sizing: border-box;
 }
 
-.social-vk::after {
-  content: url(img/vk.svg);
-  margin: auto;
+.page-footer__social-link:focus {
+  outline: none;
 }
 
-.social-tg::after {
-  content: url(img/tg.svg);
-  margin: auto;
+.page-footer__social-link:hover svg {
+  fill: #68A2CA;
 }
 
-.social-yt::after {
-  content: url(img/youtube.svg);
-  margin: auto;
+.page-footer__social-link:focus svg {
+  fill: #68A2CA;
+}
+
+.page-footer__social-link:active svg {
+  fill: rgba(104, 162, 202, 0.3);
+}
+
+.social-vk {
+  padding-top: 12px;
+  padding-left: 10.5px;
+}
+
+.social-tg {
+  padding: 11px 14px;
+}
+
+.social-yt {
+  padding-top: 10.5px;
+  padding-left: 11.6px;
 }
 
 .page-footer__tel {
+  padding-left: 2px;
+  padding-top: 6px;
   font-size: 40px;
   line-height: 40px;
   color: #000000;
@@ -570,6 +595,28 @@ padding: 64px;
 .page-footer__tel:active {
   color: rgba(117, 97, 87, 0.3);
 }
+
+.page-footer__developer {
+  padding-top: 5px;
+  fill: #000000;
+}
+
+.page-footer__developer:focus {
+  outline: none;
+}
+
+.page-footer__developer:hover svg {
+  fill: #756157;
+}
+
+.page-footer__developer:focus svg {
+  fill: #756157;
+}
+
+.page-footer__developer:active svg {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
 
 /* CATALOG PAGE */
 
@@ -1167,6 +1214,8 @@ padding: 64px;
 
 .newsletter__btn--catalog {
   background-color: #82B3D3;
+  padding-top: 9px;
+  padding-bottom: 7px;
 }
 
 /* MODAL */
