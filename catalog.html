@@ -110,9 +110,17 @@
           </fieldset>
           <fieldset class="filter__fieldset filter__fieldset--price price">
             <legend class="filter__legend price__title">Стоимость, ₽:</legend>
-            <input class="price__input--from" type="text">
-            <input class="price__input--to" type="text">
-            <input class="price__input--range" type="range">
+            <div class="price-inputs-wrapper">
+              <input class="price__input price__input--from" type="text">
+              <input class="price__input price__input--to" type="text">
+            </div>
+            <div class="slider-container">
+              <div class="slider">
+                <div class="slider__process"></div>
+                <div class="slider__start-pin"></div>
+                <div class="slider__finish-pin"></div>
+              </div>
+            </div>
           </fieldset>
           <div class="filter__buttons-wrapper">
             <button class="filter__form--submit btn-secondary">Применить</button>
