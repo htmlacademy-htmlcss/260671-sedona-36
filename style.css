@@ -598,7 +598,7 @@ padding: 64px;
   display: flex;
   min-height: 21px;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 41px;
   padding: 0;
   list-style-type: none;
   box-sizing: border-box;
@@ -634,18 +634,19 @@ padding: 64px;
 
 .filter__form {
   display: flex;
-  justify-content: space-between;
 }
 
 .filter__fieldset {
   margin: 0;
+  margin-right: 70px;
   padding: 0;
   border: none;
 }
 
 .filter__legend {
+  padding: 0;
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -674,7 +675,7 @@ padding: 64px;
 }
 
 .infrastructure__label {
-  margin-left: 36px;
+  margin-left: 16px;
   margin-bottom: 16px;
   font-size: 18px;
   line-height: 23px;
@@ -705,13 +706,19 @@ padding: 64px;
   width: 13px;
   height: 11px;
   left: 4px;
-  top: 6px;
+  top: 5px;
   background-image: url(img/mark.svg);
   fill: #3F5E72;
 }
 
 .infrastructure__label:last-of-type {
   margin-bottom: 0;
+}
+
+.filter__fieldset--housing {
+  min-width: 150px;
+  margin-right: 141px;
+  box-sizing: border-box;
 }
 
 .housing__list {
@@ -735,7 +742,7 @@ padding: 64px;
 }
 
 .housing__label {
-  margin-left: 36px;
+  margin-left: 16px;
   margin-bottom: 16px;
   font-size: 18px;
   line-height: 23px;
@@ -780,14 +787,11 @@ padding: 64px;
   margin-bottom: 0;
 }
 
-.filter__buttons-wrapper {
-  display: flex;
-  padding-top: 56px;
-  flex-direction: column;
-  align-items: center;
-}
-
 /* PRICE */
+
+.price__title {
+  margin-bottom: 31px;
+}
 
 .price-inputs-wrapper {
   display: flex;
@@ -797,10 +801,11 @@ padding: 64px;
 .price__input {
   width: 143px;
   height: 48px;
-  padding: 12px 20px;
+  padding: 13px 20px 11px;
   margin: 0;
   background-color: #F2F2F2;
   border: none;
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -839,8 +844,8 @@ padding: 64px;
   position: absolute;
   width: 20px;
   height: 20px;
-  top: -10px;
-  left: 10px;
+  top: -9px;
+  left: 0;
   border-radius: 5px;
   background-color: #FFFFFF;
   z-index: 2;
@@ -850,8 +855,8 @@ padding: 64px;
   position: absolute;
   width: 20px;
   height: 20px;
-  top: -10px;
-  right: 30px;
+  top: -9px;
+  right: 60px;
   border-radius: 5px;
   background-color: #FFFFFF;
   z-index: 2;
@@ -865,8 +870,20 @@ padding: 64px;
   z-index: 1;
 }
 
+/* FORM BUTTONS */
+
+.filter__buttons-wrapper {
+  width: 191px;
+  display: flex;
+  padding-top: 55px;
+  flex-direction: column;
+  align-items: center;
+}
+
 .filter__form--submit {
   margin-bottom: 32px;
+  padding-top: 9px;
+  padding-bottom: 7px;
   padding-left: 50px;
   padding-right: 50px;
 }
@@ -875,7 +892,8 @@ padding: 64px;
   display: block;
   background: none;
   border: none;
-  padding: 8px 57px;
+  padding: 9px 57px 7px;
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -1003,18 +1021,28 @@ padding: 64px;
             "detail favorite"
             "star rating";
   gap: 16px 20px;
+  width: 340px;
   padding: 20px;
-  border: 1px solid #E6E6E6;
+  outline: 1px solid #E6E6E6;
   border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .product-card__title {
   grid-area: title;
   margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
 }
 
 .product-card__img {
   grid-area: img;
+}
+
+.product-card__housing {
+  font-size: 18px;
+  line-height: 21px;
 }
 
 .product-card__detail,
@@ -1026,11 +1054,21 @@ padding: 64px;
 .product-card__price {
   grid-area: price;
   justify-self: flex-end;
+  font-size: 18px;
+  line-height: 21px;
 }
 
 .product-card__rating {
   grid-area: rating;
   justify-self: flex-end;
+  display: block;
+  padding: 10px 22px 7px 23px;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  box-sizing: border-box;
 }
 
 .favorite-js {

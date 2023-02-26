@@ -34,7 +34,7 @@
           </svg>
           <span class="favorites-counter">12</span>
         </button>
-        <button class="user-menu__btn--popover btn-primary">Хочу сюда!</button>
+        <button class="user-menu__btn--popover btn-primary modal-open-js">Хочу сюда!</button>
       </div>
     </header>
     <main class="catalog-content">
@@ -111,16 +111,18 @@
           <fieldset class="filter__fieldset filter__fieldset--price price">
             <legend class="filter__legend price__title">Стоимость, ₽:</legend>
             <div class="price-inputs-wrapper">
-              <input class="price__input price__input--from" type="text">
-              <input class="price__input price__input--to" type="text">
+              <input class="price__input price__input--from" type="text" value="0">
+              <input class="price__input price__input--to" type="text" value="9000">
             </div>
-            <div class="slider-container">
-              <div class="slider">
-                <div class="slider__process"></div>
-                <div class="slider__start-pin"></div>
-                <div class="slider__finish-pin"></div>
+            <div>
+                <div class="slider-container">
+                  <div class="slider">
+                    <div class="slider__process"></div>
+                    <div class="slider__start-pin"></div>
+                    <div class="slider__finish-pin"></div>
+                  </div>
+                </div>
               </div>
-            </div>
           </fieldset>
           <div class="filter__buttons-wrapper">
             <button class="filter__form--submit btn-secondary">Применить</button>
@@ -174,7 +176,7 @@
               <button class="btn-primary product-card__detail" type="button">Подробнее</button>
               <button class="btn-secondary product-card__favorite favorite-js">В избранном</button>
               <span class="product-card__stars"></span>
-              <span class="product-card__rating">Рейтинг: </span>
+              <span class="product-card__rating">Рейтинг: 9,2</span>
           </li>
           <li class="products__item product-card">
             <h3 class="product-card__title">Desert Quail Inn</h3>
@@ -184,7 +186,7 @@
               <button class="btn-primary product-card__detail" type="button">Подробнее</button>
               <button class="btn-secondary product-card__favorite">В избранное</button>
               <span class="product-card__stars"></span>
-              <span class="product-card__rating">Рейтинг: </span>
+              <span class="product-card__rating">Рейтинг: 6,9</span>
           </li>
           <li class="products__item product-card">
             <h3 class="product-card__title">GreenTree Inn</h3>
@@ -194,7 +196,7 @@
               <button class="btn-primary product-card__detail" type="button">Подробнее</button>
               <button class="btn-secondary product-card__favorite">В избранное</button>
               <span class="product-card__stars"></span>
-              <span class="product-card__rating">Рейтинг: </span>
+              <span class="product-card__rating">Рейтинг: 5,0</span>
           </li>
         </ul>
         <ol class="products__pagination">
@@ -250,6 +252,48 @@
         <img src="img/developer.svg" alt="HTML academy" class="page-footer__developer--logo">
       </a>
     </footer>
+    <div class="modal-container modal-js">
+      <div class="modal modal-find">
+        <button class="modal__btn">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal__content">
+          <h2 class="modal__title">Поиск гостиницы в Седоне</h2>
+          <form action="https://echo.htmlacademy.ru/" class="modal__form order">
+            <fieldset class="order__fieldset">
+              <label for="" class="order__label order__label--visit">Дата заезда:
+                <input type="date" class="order__input order__input--visit" name="visit">
+              </label>
+            </fieldset>
+            <fieldset class="order__fieldset">
+              <label for="" class="order__label order__label--leave">Дата выезда:
+                <input type="date" class="order__input order__input--leave" name="leave">
+              </label>
+            </fieldset>
+            <fieldset class="order__fieldset order__fieldset--visitor">
+              <label for="" class="order__label order__label--adult">Взрослые:
+                <input type="text" class="order__input order__input--adult" name="adult">
+              </label>
+              <span class="order__label--children order__label--children-icon">
+                <label for="children" class="order__label order__label--children">Дети:</label>
+                <span class="tooltip">
+                  <button class="tooltip__btn" type="button" aria-labelledby="tooltip-label">
+                    <svg class="tooltip__icon" width="2" height="12" viewBox="0 0 2 12" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z"/>
+                    </svg>
+                  </button>
+                  <span class="tooltip__text" role="tooltip" id="tooltip-label">
+                    Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                  </span>
+                </span>
+              </span>
+                <input type="text" class="order__input order__input--children" name="children">
+            </fieldset>
+            <button class="order__btn btn-secondary">Найти</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
