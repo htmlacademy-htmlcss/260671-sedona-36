@@ -1417,13 +1417,13 @@ padding: 64px;
 }
 
 .tooltip__text {
-  display: none;
+  display: block;
   position: absolute;
   left: 50%;
-  transform: translate(-50%, 15px);
+  transform: translate(-50%, 15px) translateX(11px);
   width: 256px;
   min-height: 143px;
-  padding: 15px 18px 18px 22px;
+  padding: 21px 18px 12px 22px;
   background-color: #333333;
   border-radius: 10px;
   font-size: 16px;
