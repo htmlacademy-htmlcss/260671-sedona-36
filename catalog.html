@@ -278,27 +278,38 @@
       <div class="modal modal-find">
         <button class="modal__btn">
           <span class="visually-hidden">Закрыть</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 1.29231L12.7077 0L7 5.70769L1.29231 0L0 1.29231L5.70769 7L0 12.7077L1.29231 14L7 8.29231L12.7077 14L14 12.7077L8.29231 7L14 1.29231Z"/>
+          </svg>
         </button>
         <section class="modal__content">
           <h2 class="modal__title">Поиск гостиницы в Седоне</h2>
           <form action="https://echo.htmlacademy.ru/" class="modal__form order">
             <fieldset class="order__fieldset">
               <label for="" class="order__label order__label--visit">Дата заезда:
-                <input type="date" class="order__input order__input--visit" name="visit" value="2020-04-27">
+                <input type="date" class="order__input order__input--visit" name="visit">
               </label>
             </fieldset>
             <fieldset class="order__fieldset">
               <label for="" class="order__label order__label--leave">Дата выезда:
-                <input type="date" class="order__input order__input--leave" name="leave" value="2023-09-01">
+                <input type="date" class="order__input order__input--leave" name="leave">
               </label>
             </fieldset>
             <fieldset class="order__fieldset order__fieldset--visitor">
               <div class="adult-wrapper">
                 <label for="adult" class="order__label order__label--adult">Взрослые:</label>
                   <div class="adult-counter-wrapper">
-                    <button class="adult-counter-minus">-</button>
+                    <button class="adult-counter-minus">
+                      <svg width="14" height="2" viewBox="0 0 14 2" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0L0 2L14 2V0L0 0Z"/>
+                      </svg>
+                    </button>
                     <input type="text" class="order__input order__input--counter order__input--adult" name="adult" placeholder="2">
-                    <button class="adult-counter-plus">+</button>
+                    <button class="adult-counter-plus">
+                      <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                      </svg>
+                    </button>
                   </div>
               </div>
               <div class="children-wrapper">
@@ -316,9 +327,17 @@
                   </span>
                 </span>
                 <div class="children-counter-wrapper">
-                  <button class="children-counter-minus">-</button>
+                  <button class="children-counter-minus">
+                    <svg width="14" height="2" viewBox="0 0 14 2" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0L0 2L14 2V0L0 0Z"/>
+                    </svg>
+                  </button>
                   <input type="text" class="order__input order__input--counter order__input--children" name="children" placeholder="2">
-                  <button class="children-counter-plus">+</button>
+                  <button class="children-counter-plus">
+                    <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                    </svg>
+                  </button>
                 </div>
               </div>
             </fieldset>
