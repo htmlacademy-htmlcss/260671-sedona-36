@@ -84,3 +84,22 @@ const tooltipShow = () => {
 }
 
 tooltipButton.addEventListener("click", tooltipShow);
+
+// STARS
+const starContainers = document.querySelectorAll(".product-card__stars");
+
+const elementCreator = (findedElement, starCount) => {
+  for (let i = 0; i < starCount; i++) {
+    let element = document.createElement("img");
+  element.style.display = "block";
+  element.style.width = "18px";
+  element.style.height = "17px";
+  element.classList.add("product-card__star");
+  element.src = "img/star.svg";
+  findedElement.appendChild(element);
+  };
+};
+
+starContainers.forEach(item => {
+  elementCreator(item, item.dataset.stars);
+});

@@ -111,8 +111,12 @@
           <fieldset class="filter__fieldset filter__fieldset--price price">
             <legend class="filter__legend price__title">Стоимость, ₽:</legend>
             <div class="price-inputs-wrapper">
-              <input class="price__input price__input--from" type="text" value="0">
-              <input class="price__input price__input--to" type="text" value="9000">
+              <div class="price__input--icon price__input--icon-from">
+                <input class="price__input price__input--from" type="text" value="0">
+              </div>
+              <div class="price__input--icon price__input--icon-to">
+                <input class="price__input price__input--to" type="text" value="9000">
+              </div>
             </div>
             <div>
                 <div class="slider-container">
@@ -165,7 +169,7 @@
               <span class="product-card__price">От 4000 ₽</span>
               <button class="btn-primary product-card__detail" type="button">Подробнее</button>
               <button class="btn-secondary product-card__favorite">В избранное</button>
-              <span class="product-card__stars"></span>
+              <span class="product-card__stars" data-stars="4"></span>
               <span class="product-card__rating">Рейтинг: 8,5</span>
           </li>
           <li class="products__item product-card">
@@ -175,7 +179,7 @@
               <span class="product-card__price">От 5000 ₽</span>
               <button class="btn-primary product-card__detail" type="button">Подробнее</button>
               <button class="btn-secondary product-card__favorite favorite-js">В избранном</button>
-              <span class="product-card__stars"></span>
+              <span class="product-card__stars" data-stars="4"></span>
               <span class="product-card__rating">Рейтинг: 9,2</span>
           </li>
           <li class="products__item product-card">
@@ -185,7 +189,7 @@
               <span class="product-card__price">От 2500 ₽</span>
               <button class="btn-primary product-card__detail" type="button">Подробнее</button>
               <button class="btn-secondary product-card__favorite">В избранное</button>
-              <span class="product-card__stars"></span>
+              <span class="product-card__stars" data-stars="3"></span>
               <span class="product-card__rating">Рейтинг: 6,9</span>
           </li>
           <li class="products__item product-card">
@@ -195,7 +199,7 @@
               <span class="product-card__price">От 1500 ₽</span>
               <button class="btn-primary product-card__detail" type="button">Подробнее</button>
               <button class="btn-secondary product-card__favorite">В избранное</button>
-              <span class="product-card__stars"></span>
+              <span class="product-card__stars" data-stars="2"></span>
               <span class="product-card__rating">Рейтинг: 5,0</span>
           </li>
         </ul>
