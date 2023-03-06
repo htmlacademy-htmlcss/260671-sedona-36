@@ -22,6 +22,7 @@ body {
   background-color: #F2F2F2;
   font-family: "PT Sans", sans-serif;
 }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -175,6 +176,11 @@ body {
 
 .main-navigation__link:active {
   color: rgba(117, 97, 87, 0.3);
+}
+
+.main-navigation__link--current {
+  padding-bottom: 18px;
+  border-bottom: 2px solid #756257;
 }
 
 .user-menu {
@@ -716,6 +722,10 @@ padding-top: 66px;
   line-height: 21px;
   color: #FFFFFF;
   text-decoration: none;
+}
+
+.filter__breadcrumbs-link:focus {
+  outline: none;
 }
 
 .filter__breadcrumbs-link--main {
@@ -1303,29 +1313,8 @@ padding-top: 66px;
   width: 60px;
   height: 60px;
   margin-right: 8px;
-  background-color: #82B3D3;
   border-radius: 4px;
   box-sizing: border-box;
-}
-
-.products__pagination-item:hover {
-  background-color: #68A2CA;
-}
-
-.products__pagination-item--current {
-  background-color: #F2F2F2;
-}
-
-.products__pagination-item--current:hover {
-  background-color: #F2F2F2;
-}
-
-.products__pagination-item--ellipses {
-  background-color: #FFFFFF;
-}
-
-.products__pagination-item--ellipses:hover {
-  background-color: #FFFFFF;
 }
 
 .products__pagination-link {
@@ -1335,6 +1324,7 @@ padding-top: 66px;
   width: 60px;
   height: 60px;
   padding: 0;
+  background-color: #82B3D3;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -1343,20 +1333,44 @@ padding-top: 66px;
   box-sizing: border-box;
 }
 
-.products__pagination-link:focus {
-  outline: none;
-}
-
-.products__pagination-item ~  .products__pagination-link:focus {
+.products__pagination-link:hover {
   background-color: #68A2CA;
 }
 
+.products__pagination-link:focus {
+  outline: none;
+  background-color: #68A2CA;
+}
+
+.products__pagination-link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
 
 .products__pagination-link--current {
-  color: #000000;
+  background-color: #F2F2F2;
+}
+
+.products__pagination-link--current:hover,
+.products__pagination-link--current:focus {
+  background-color: #F2F2F2;
 }
 
 .products__pagination-link--ellipses {
+  background-color: #FFFFFF;
+}
+
+.products__pagination-link--ellipses:hover,
+.products__pagination-link--ellipses:focus {
+  background-color: #FFFFFF;
+}
+
+.products__pagination-link--current,
+.products__pagination-link--current:active {
+  color: #000000;
+}
+
+.products__pagination-link--ellipses,
+.products__pagination-link--ellipses:active {
   color: #000000;
 }
 
