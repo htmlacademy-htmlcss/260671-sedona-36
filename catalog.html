@@ -235,10 +235,10 @@
               </div>
             </fieldset>
             <div class="filter__buttons-wrapper">
-              <button class="filter__form--submit btn-secondary">
+              <button class="filter__form--submit btn-secondary" type="submit">
                 Применить
               </button>
-              <button class="filter__form--reset">Сбросить</button>
+              <button class="filter__form--reset" type="reset">Сбросить</button>
             </div>
           </form>
         </section>
@@ -420,7 +420,7 @@
       <footer class="page-footer">
         <ul class="page-footer__social">
           <li class="page-footer__social-item">
-            <a class="page-footer__social-link social-vk" href="#">
+            <a class="page-footer__social-link social-vk" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">VK</span>
               <svg
                 width="25"
@@ -437,7 +437,7 @@
             </a>
           </li>
           <li class="page-footer__social-item">
-            <a class="page-footer__social-link social-tg" href="#">
+            <a class="page-footer__social-link social-tg" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Telegram</span>
               <svg
                 width="18"
@@ -452,7 +452,7 @@
             </a>
           </li>
           <li class="page-footer__social-item">
-            <a class="page-footer__social-link social-yt" href="#">
+            <a class="page-footer__social-link social-yt" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">YouTube</span>
               <svg
                 width="23"
@@ -532,6 +532,7 @@
           <section class="modal__content">
             <h2 class="modal__title">Поиск гостиницы в Седоне</h2>
             <form
+              method="get"
               action="https://echo.htmlacademy.ru/"
               class="modal__form order"
             >
@@ -569,7 +570,7 @@
                     >Взрослые:</label
                   >
                   <div class="counter-wrapper adult-counter-wrapper">
-                    <button class="adult-counter-minus counter-button">
+                    <button class="adult-counter-minus counter-button" type="button">
                       <svg
                         width="21"
                         height="20"
@@ -585,7 +586,7 @@
                       name="adult"
                       value="2"
                     />
-                    <button class="adult-counter-plus counter-button">
+                    <button class="adult-counter-plus counter-button" type="button">
                       <svg
                         width="20"
                         height="20"
@@ -638,7 +639,7 @@
                     </span>
                   </span>
                   <div class="counter-wrapper children-counter-wrapper">
-                    <button class="children-counter-minus counter-button">
+                    <button class="children-counter-minus counter-button" type="button">
                       <svg
                         width="21"
                         height="20"
@@ -654,7 +655,7 @@
                       name="children"
                       value="2"
                     />
-                    <button class="children-counter-plus counter-button">
+                    <button class="children-counter-plus counter-button" type="button">
                       <svg
                         width="20"
                         height="20"
@@ -667,7 +668,7 @@
                   </div>
                 </div>
               </fieldset>
-              <button class="order__btn btn-secondary">Найти</button>
+              <button type="submit" class="order__btn btn-secondary">Найти</button>
             </form>
           </section>
         </div>
