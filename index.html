@@ -164,38 +164,154 @@
         <div class="modal modal-find">
           <button class="modal__btn">
             <span class="visually-hidden">Закрыть</span>
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14 1.29231L12.7077 0L7 5.70769L1.29231 0L0 1.29231L5.70769 7L0 12.7077L1.29231 14L7 8.29231L12.7077 14L14 12.7077L8.29231 7L14 1.29231Z"
+              />
+            </svg>
           </button>
           <section class="modal__content">
             <h2 class="modal__title">Поиск гостиницы в Седоне</h2>
-            <form action="https://echo.htmlacademy.ru/" class="modal__form order">
-              <fieldset class="order__fieldset">
-                <label for="" class="order__label order__label--visit">Дата заезда:
-                  <input type="date" class="order__input order__input--visit" name="visit">
+            <form
+              action="https://echo.htmlacademy.ru/"
+              class="modal__form order"
+            >
+              <fieldset class="order__fieldset order__fieldset--visit">
+                <label for="" class="order__label order__label--visit"
+                  >Дата заезда:
+                  <div class="order__input--date">
+                    <input
+                      type="text"
+                      class="order__input order__input--visit"
+                      name="visit"
+                      value="27 апреля 2020"
+                      placeholder="Укажите дату"
+                    />
+                  </div>
                 </label>
               </fieldset>
-              <fieldset class="order__fieldset">
-                <label for="" class="order__label order__label--leave">Дата выезда:
-                  <input type="date" class="order__input order__input--leave" name="leave">
+              <fieldset class="order__fieldset order__fieldset--leave">
+                <label for="" class="order__label order__label--leave"
+                  >Дата выезда:
+                  <div class="order__input--date">
+                    <input
+                      type="text"
+                      class="order__input order__input--leave"
+                      name="leave"
+                      value="1 сентября 2023"
+                      placeholder="Укажите дату"
+                    />
+                  </div>
                 </label>
               </fieldset>
               <fieldset class="order__fieldset order__fieldset--visitor">
-                <label for="" class="order__label order__label--adult">Взрослые:
-                  <input type="text" class="order__input order__input--adult" name="adult">
-                </label>
-                <span class="order__label--children order__label--children-icon">
-                  <label for="children" class="order__label order__label--children">Дети:</label>
-                  <span class="tooltip">
-                    <button class="tooltip__btn" type="button" aria-labelledby="tooltip-label">
-                      <svg class="tooltip__icon" width="2" height="12" viewBox="0 0 2 12" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z"/>
+                <div class="adult-wrapper">
+                  <label for="adult" class="order__label order__label--adult"
+                    >Взрослые:</label
+                  >
+                  <div class="counter-wrapper adult-counter-wrapper">
+                    <button class="adult-counter-minus counter-button">
+                      <svg
+                        width="21"
+                        height="20"
+                        viewBox="0 0 21 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M3.39282 9V11H17.3928V9H3.39282Z"/>
                       </svg>
                     </button>
-                    <span class="tooltip__text" role="tooltip" id="tooltip-label">
-                      Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                    <input
+                      type="text"
+                      class="order__input order__input--counter order__input--adult"
+                      name="adult"
+                      value="2"
+                    />
+                    <button class="adult-counter-plus counter-button">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="children-wrapper">
+                  <span
+                    class="order__label--children order__label--children-icon"
+                  >
+                    <label
+                      for="children"
+                      class="order__label order__label--children"
+                      >Дети:</label
+                    >
+                    <span class="tooltip">
+                      <button
+                        class="tooltip__btn"
+                        type="button"
+                        aria-labelledby="tooltip-label"
+                      >
+                        <svg
+                          class="tooltip__icon"
+                          width="2"
+                          height="12"
+                          viewBox="0 0 2 12"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z"
+                          />
+                        </svg>
+                      </button>
+                      <span
+                        class="tooltip__text"
+                        role="tooltip"
+                        id="tooltip-label"
+                      >
+                        Укажите количество детей, которые будут с вами, возраст
+                        которых от 6 до 18 лет. Дети до 6 лет размещаются
+                        бесплатно.
+                      </span>
                     </span>
                   </span>
-                </span>
-                  <input type="text" class="order__input order__input--children" name="children">
+                  <div class="counter-wrapper children-counter-wrapper">
+                    <button class="children-counter-minus counter-button">
+                      <svg
+                        width="21"
+                        height="20"
+                        viewBox="0 0 21 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M3.39282 9V11H17.3928V9H3.39282Z"/>
+                      </svg>
+                    </button>
+                    <input
+                      type="text"
+                      class="order__input order__input--counter order__input--children"
+                      name="children"
+                      value="2"
+                    />
+                    <button class="children-counter-plus counter-button">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
               </fieldset>
               <button class="order__btn btn-secondary">Найти</button>
             </form>
