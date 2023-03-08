@@ -13,6 +13,56 @@ favoriteButtons.forEach((item) => {
   });
 });
 
+// MODAL WINDOW
+const modalOpenButton = document.querySelectorAll(".modal-open-js");
+const modal = document.querySelector(".modal-container");
+const modalCloseButton = document.querySelector(".modal__btn");
+
+const modalOpen = () => {
+  modal.style.display = "flex";
+  modalCloseButton.addEventListener("click", modalClose);
+};
+
+const modalClose = () => {
+  modal.style.display = "none";
+  modalCloseButton.removeEventListener("click", modalClose);
+};
+
+modalOpenButton.forEach((item) => {
+  item.addEventListener("click", modalOpen);
+});
+
+
+// TOOLTIP
+
+const tooltipButton = document.querySelector(".tooltip__btn");
+const tooltipText = document.querySelector(".tooltip__text");
+
+const tooltipShow = () => {
+  tooltipText.style.display = "block";
+  setTimeout(() => {
+    tooltipText.style.display = "none";
+  }, "3000");
+};
+
+tooltipButton.addEventListener("click", tooltipShow);
+
+// STARS
+const starContainers = document.querySelectorAll(".product-card__stars");
+
+const elementCreator = (findedElement, starCount) => {
+  for (let i = 0; i < starCount; i++) {
+    let element = document.createElement("img");
+    element.classList.add("product-card__star");
+    element.src = "img/star.svg";
+    findedElement.appendChild(element);
+  }
+};
+
+starContainers.forEach((item) => {
+  elementCreator(item, item.dataset.stars);
+});
+
 // SLIDER
 let pinStart = document.querySelector(".slider__start-pin");
 let pinFinish = document.querySelector(".slider__finish-pin");
@@ -58,52 +108,3 @@ function mouseDown(evt) {
 }
 pinStart.addEventListener("mousedown", mouseDown);
 pinFinish.addEventListener("mousedown", mouseDown);
-
-// MODAL WINDOW
-const modalOpenButton = document.querySelectorAll(".modal-open-js");
-const modal = document.querySelector(".modal-container");
-const modalCloseButton = document.querySelector(".modal__btn");
-
-const modalOpen = () => {
-  modal.style.display = "flex";
-  modalCloseButton.addEventListener("click", modalClose);
-};
-
-const modalClose = () => {
-  modal.style.display = "none";
-  modalCloseButton.removeEventListener("click", modalClose);
-};
-
-modalOpenButton.forEach((item) => {
-  item.addEventListener("click", modalOpen);
-});
-
-// TOOLTIP
-
-const tooltipButton = document.querySelector(".tooltip__btn");
-const tooltipText = document.querySelector(".tooltip__text");
-
-const tooltipShow = () => {
-  tooltipText.style.display = "block";
-  setTimeout(() => {
-    tooltipText.style.display = "none";
-  }, "3000");
-};
-
-tooltipButton.addEventListener("click", tooltipShow);
-
-// STARS
-const starContainers = document.querySelectorAll(".product-card__stars");
-
-const elementCreator = (findedElement, starCount) => {
-  for (let i = 0; i < starCount; i++) {
-    let element = document.createElement("img");
-    element.classList.add("product-card__star");
-    element.src = "img/star.svg";
-    findedElement.appendChild(element);
-  }
-};
-
-starContainers.forEach((item) => {
-  elementCreator(item, item.dataset.stars);
-});
