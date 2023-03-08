@@ -1535,6 +1535,25 @@ padding-top: 66px;
   box-sizing: border-box;
 }
 
+.order__input--date {
+  position: relative;
+}
+
+.order__input--date::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  background-image: url("img/calendar.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
 .order__input::placeholder {
   color:rgba(0, 0, 0, 0.3);
 }
@@ -1544,15 +1563,21 @@ padding-top: 66px;
 }
 
 .order__input:focus {
-  outline: 3px solid #83B3D3;
+  outline: none;
 }
 
 .order__input--visit,
 .order__input--leave {
   width: 440px;
-  padding: 12px 20px;
+  padding: 13px 20px 11px;
   border-radius: 4px;
   box-sizing: border-box;
+  color: #000000;
+}
+
+.order__input--visit:focus,
+.order__input--leave:focus {
+  outline: 3px solid #83B3D3;
 }
 
 .adult-wrapper {
@@ -1567,10 +1592,50 @@ padding-top: 66px;
   height: 48px;
 }
 
+.adult-counter-plus svg,
+.children-counter-plus svg,
+.adult-counter-minus svg,
+.children-counter-minus svg {
+  display: block;
+  fill: #000000;
+  fill-opacity: 0.3;
+}
+
 .order__input--counter {
   padding-top: 5px;
   padding-left: 8px;
   width: 31px;
+  color: #000000;
+}
+
+.counter-wrapper:focus-within:not(.counter-button:focus) {
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.counter-wrapper:hover  button{
+  background-color: #E5E5E5;
+}
+
+.counter-button:focus {
+  outline: none;
+}
+
+.counter-button:hover  svg{
+  fill: #000000;
+  fill-opacity: 1;
+}
+
+.counter-button:focus  svg{
+  outline: 3px solid #83B3D3;
+  fill: #000000;
+  fill-opacity: 1;
+  border-radius: 4px;
+}
+
+.counter-button:active  svg{
+  fill: #000000;
+  fill-opacity: 0.3;
 }
 
 .adult-counter-wrapper,
@@ -1609,15 +1674,6 @@ padding-top: 66px;
   font-size: 28px;
   color: rgba(117, 97, 87, 0.3);
   box-sizing: border-box;
-}
-
-.adult-counter-plus svg,
-.children-counter-plus svg,
-.adult-counter-minus svg,
-.children-counter-minus svg {
-  display: block;
-  fill: #756157;
-  fill-opacity: 0.3;
 }
 
 .order__btn {
