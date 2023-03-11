@@ -214,6 +214,7 @@
                     class="price__input price__input--from"
                     type="text"
                     value="0"
+                    placeholder="0"
                   />
                 </div>
                 <div class="price__input--icon price__input--icon-to">
@@ -221,6 +222,7 @@
                     class="price__input price__input--to"
                     type="text"
                     value="9000"
+                    placeholder="9000"
                   />
                 </div>
               </div>
@@ -228,17 +230,17 @@
                 <div class="slider-container">
                   <div class="slider">
                     <div class="slider__process"></div>
-                    <div class="slider__start-pin"></div>
-                    <div class="slider__finish-pin"></div>
+                    <button class="slider__pin slider__start-pin" type="button"><span class="visually-hidden">Ползунок изменения нижнего предела цены.</span></button>
+                    <button class="slider__pin slider__finish-pin" type="button"><span class="visually-hidden">Ползунок изменения верхнего предела цены.</span></button>
                   </div>
                 </div>
               </div>
             </fieldset>
             <div class="filter__buttons-wrapper">
-              <button class="filter__form--submit btn-secondary">
+              <button class="filter__form--submit btn-secondary" type="submit">
                 Применить
               </button>
-              <button class="filter__form--reset">Сбросить</button>
+              <button class="filter__form--reset" type="reset">Сбросить</button>
             </div>
           </form>
         </section>
@@ -254,7 +256,7 @@
             <ul class="products__view--list">
               <li class="products__view--item">
                 <button
-                  class="products__view--btn products__view--btn--tile"
+                  class="products__view--btn products__view--btn--current products__view--btn--tile"
                   type="button"
                 >
                   <span class="visually-hidden">Плитка</span>
@@ -420,7 +422,7 @@
       <footer class="page-footer">
         <ul class="page-footer__social">
           <li class="page-footer__social-item">
-            <a class="page-footer__social-link social-vk" href="#">
+            <a class="page-footer__social-link social-vk" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">VK</span>
               <svg
                 width="25"
@@ -437,7 +439,7 @@
             </a>
           </li>
           <li class="page-footer__social-item">
-            <a class="page-footer__social-link social-tg" href="#">
+            <a class="page-footer__social-link social-tg" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Telegram</span>
               <svg
                 width="18"
@@ -452,7 +454,7 @@
             </a>
           </li>
           <li class="page-footer__social-item">
-            <a class="page-footer__social-link social-yt" href="#">
+            <a class="page-footer__social-link social-yt" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">YouTube</span>
               <svg
                 width="23"
@@ -532,6 +534,7 @@
           <section class="modal__content">
             <h2 class="modal__title">Поиск гостиницы в Седоне</h2>
             <form
+              method="get"
               action="https://echo.htmlacademy.ru/"
               class="modal__form order"
             >
@@ -569,7 +572,7 @@
                     >Взрослые:</label
                   >
                   <div class="counter-wrapper adult-counter-wrapper">
-                    <button class="adult-counter-minus counter-button">
+                    <button class="adult-counter-minus counter-button" type="button">
                       <svg
                         width="21"
                         height="20"
@@ -585,7 +588,7 @@
                       name="adult"
                       value="2"
                     />
-                    <button class="adult-counter-plus counter-button">
+                    <button class="adult-counter-plus counter-button" type="button">
                       <svg
                         width="20"
                         height="20"
@@ -638,7 +641,7 @@
                     </span>
                   </span>
                   <div class="counter-wrapper children-counter-wrapper">
-                    <button class="children-counter-minus counter-button">
+                    <button class="children-counter-minus counter-button" type="button">
                       <svg
                         width="21"
                         height="20"
@@ -654,7 +657,7 @@
                       name="children"
                       value="2"
                     />
-                    <button class="children-counter-plus counter-button">
+                    <button class="children-counter-plus counter-button" type="button">
                       <svg
                         width="20"
                         height="20"
@@ -667,7 +670,7 @@
                   </div>
                 </div>
               </fieldset>
-              <button class="order__btn btn-secondary">Найти</button>
+              <button type="submit" class="order__btn btn-secondary">Найти</button>
             </form>
           </section>
         </div>

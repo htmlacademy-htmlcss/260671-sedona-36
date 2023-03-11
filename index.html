@@ -91,19 +91,19 @@
             </p>
           </div>
           <ul class="advantages__list">
-            <li
-              class="advantages__item advantages__item--primary advantages__item--wrapper"
-            >
-              <h3 class="advantages__title advantages__title--primary">
-                Настоящий<br />городок
-              </h3>
-              <p class="advantages__text advantages__text--primary">
-                Седона — не аттракцион для туристов, там течёт своя жизнь
-              </p>
+            <li class="advantages__item advantages__item--primary">
+              <div class="advantages__item--container">
+                <h3 class="advantages__title advantages__title--primary">
+                  Настоящий<br />городок
+                </h3>
+                <p class="advantages__text advantages__text--primary">
+                  Седона — не аттракцион для туристов, там течёт своя жизнь
+                </p>
+              </div>
+              <img class="advantages__item--picture" src="img/advantages-1.jpg" width="800" height="385" alt="Фотография города Седона."></img>
             </li>
-            <li class="advantages__item advantages__item--1"></li>
             <li
-              class="advantages__item advantages__item--secondary advantages__item--wrapper"
+              class="advantages__item advantages__item--secondary"
             >
               <h3 class="advantages__title advantages__title--secondary">
                 Небольшая<br />площадь
@@ -113,7 +113,7 @@
               </p>
             </li>
             <li
-              class="advantages__item advantages__item--secondary-dark advantages__item--wrapper"
+              class="advantages__item advantages__item--secondary advantages__item--secondary-dark"
             >
               <h3 class="advantages__title advantages__title--secondary-dark">
                 Красивая<br />дорога
@@ -123,7 +123,7 @@
               </p>
             </li>
             <li
-              class="advantages__item advantages__item--secondary advantages__item--wrapper"
+              class="advantages__item advantages__item--secondary"
             >
               <h3 class="advantages__title advantages__title--secondary">
                 Мало<br />туристов
@@ -132,63 +132,48 @@
                 Большинство едет в Гранд Каньон и толпится там
               </p>
             </li>
-            <li class="advantages__item advantages__item--2"></li>
-            <li
-              class="advantages__item advantages__item--primary advantages__item--wrapper"
-            >
-              <h3 class="advantages__title advantages__title--primary">
-                Там есть<br />мост дьявола
-              </h3>
-              <p class="advantages__text advantages__text--primary">
-                Да, по нему можно пройти! Если вы осмелитесь, разумеется
-              </p>
-            </li>
-            <li class="advantages__item advantages__item--banner banner">
-              <p class="banner__title">
-                Приезжайте в Седону отдохнуть<br />в комфорте и уюте!
-              </p>
-              <p class="banner__text">
-                Опытный персонал и качественное обслуживание!
-              </p>
-            </li>
-            <li
-              class="advantages__item advantages__item--secondary advantages__item--wrapper"
-            >
-              <div class="advantages-item-container">
-                <h3 class="advantages__title--third">Жильё</h3>
-                <p class="advantages__text--third">
-                  Рекомендуем пожить в&nbsp;настоящем мотеле,
-                  все&nbsp;как&nbsp;в&nbsp;кино!
-                </p>
-                <img class="advantages__icon" src="img/house.svg" alt="" />
+            <li class="advantages__item advantages__item--primary">
+              <div class="advantages__item--container">
+                <h3 class="advantages__title advantages__title--primary">Там есть<br />мост дьявола</h3>
+                <p class="advantages__text advantages__text--primary">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
+              <img class="advantages__item--picture advantages__item--picture-reverse" src="img/advantages-2.jpg" width="800" height="385" alt="Фотография моста дьявола."></img>
+            </li>
+          </ul>
+          </section>
+          <section class="features">
+            <div class="features__header">
+              <h2 class="features__header--title">Приезжайте в Седону отдохнуть<br />в комфорте и уюте!</h2>
+              <p class="features__header--text">Опытный персонал и качественное обслуживание!</p>
+            </div>
+            <ul class="features__list">
+              <li class="features__item">
+                <h3 class="features__title features__title--housing">Жильё</h3>
+                <p class="features__text">
+                  Рекомендуем пожить в&nbsp;настоящем мотеле,
+                  всё&nbsp;как&nbsp;в&nbsp;кино!
+                </p>
             </li>
             <li
-              class="advantages__item advantages__item--secondary-light advantages__item--wrapper"
+              class="features__item features__item--light"
             >
-              <div class="advantages-item-container">
-                <h3 class="advantages__title--third">Еда</h3>
-                <p class="advantages__text--third">
+                <h3 class="features__title features__title--food">Еда</h3>
+                <p class="features__text">
                   Всегда заказывайте топовый&nbsp;фирменный бургер, вы не
                   разочаруетесь!
                 </p>
-                <img class="advantages__icon" src="img/food.svg" alt="" />
-              </div>
             </li>
             <li
-              class="advantages__item advantages__item--secondary advantages__item--wrapper"
+              class="features__item"
             >
-              <div class="advantages-item-container">
-                <h3 class="advantages__title--third">Сувениры</h3>
-                <p class="advantages__text--third">
+                <h3 class="features__title features__title--souvenirs">Сувениры</h3>
+                <p class="features__text">
                   Не только китайского, но&nbsp;и&nbsp;настоящего местного
                   производства!
                 </p>
-                <img class="advantages__icon" src="img/souvenirs.svg" alt="" />
-              </div>
             </li>
-          </ul>
-        </section>
+            </ul>
+          </section>
         <section class="offer">
           <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
           <p class="offer__title">Заинтересовались?</p>
@@ -203,7 +188,7 @@
         <section class="newsletter">
           <h2 class="newsletter__title">Подпишитесь на рассылку</h2>
           <p class="newsletter__text">
-            Только полезная информация и никакого спама, честное бойскаутское!
+            Только полезная информация и никакого спама,<br />честное бойскаутское!
           </p>
           <form action="https://echo.htmlacademy.ru/" class="newsletter__form">
             <input
@@ -222,7 +207,7 @@
       <footer class="page-footer">
         <ul class="page-footer__social">
           <li class="page-footer__social-item">
-            <a class="page-footer__social-link social-vk" href="#">
+            <a class="page-footer__social-link social-vk" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">VK</span>
               <svg
                 width="25"
@@ -239,7 +224,7 @@
             </a>
           </li>
           <li class="page-footer__social-item">
-            <a class="page-footer__social-link social-tg" href="#">
+            <a class="page-footer__social-link social-tg" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Telegram</span>
               <svg
                 width="18"
@@ -254,7 +239,7 @@
             </a>
           </li>
           <li class="page-footer__social-item">
-            <a class="page-footer__social-link social-yt" href="#">
+            <a class="page-footer__social-link social-yt" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">YouTube</span>
               <svg
                 width="23"
@@ -334,6 +319,7 @@
           <section class="modal__content">
             <h2 class="modal__title">Поиск гостиницы в Седоне</h2>
             <form
+              method="get"
               action="https://echo.htmlacademy.ru/"
               class="modal__form order"
             >
