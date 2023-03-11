@@ -6,6 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/faviconsfavicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
   </head>
   <body>
     <div class="page-container">
@@ -311,9 +328,7 @@
               viewBox="0 0 14 14"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M14 1.29231L12.7077 0L7 5.70769L1.29231 0L0 1.29231L5.70769 7L0 12.7077L1.29231 14L7 8.29231L12.7077 14L14 12.7077L8.29231 7L14 1.29231Z"
-              />
+              <path d="M14 1.29231L12.7077 0L7 5.70769L1.29231 0L0 1.29231L5.70769 7L0 12.7077L1.29231 14L7 8.29231L12.7077 14L14 12.7077L8.29231 7L14 1.29231Z"/>
             </svg>
           </button>
           <section class="modal__content">
@@ -324,18 +339,23 @@
               class="modal__form order"
             >
               <fieldset class="order__fieldset order__fieldset--visit">
-                <label for="visit-field" class="order__label order__label--visit"
-                  >Дата заезда:
-                    <input
-                      type="text"
-                      class="order__input order__input--visit"
-                      name="visit"
-                      id="visit-field"
-                      value="27 апреля 2020"
-                      placeholder="Укажите дату"
-                      required
-                    />
+                <label
+                  class="order__label order__label--visit"
+                  for="visit-field"
+                >
+                  Дата заезда:
                 </label>
+                    <div class="order__input--date-wrapper">
+                      <input
+                        type="text"
+                        class="order__input order__input--visit"
+                        name="visit"
+                        id="visit-field"
+                        value="27 апреля 2020"
+                        placeholder="Укажите дату"
+                        required
+                      />
+                    </div>
                 <div class="validation-container">
                   <p class="order__validation order__validation--error">Мы не можем отправить вас в прошлое.</p>
                 </div>
@@ -343,16 +363,18 @@
               <fieldset class="order__fieldset order__fieldset--leave">
                 <label for="leave-field" class="order__label order__label--leave"
                   >Дата выезда:
-                    <input
-                      type="text"
-                      class="order__input order__input--leave"
-                      name="leave"
-                      id="leave-field"
-                      value="1 сентября 2023"
-                      placeholder="Укажите дату"
-                      required
-                    />
                 </label>
+                    <div class="order__input--date-wrapper">
+                      <input
+                        type="text"
+                        class="order__input order__input--leave"
+                        name="leave"
+                        id="leave-field"
+                        value="1 сентября 2023"
+                        placeholder="Укажите дату"
+                        required
+                      />
+                    </div>
                 <div class="validation-container">
                   <p class="order__validation order__validation--notification">На эти даты есть свободные номера. Пока есть.</p>
                 </div>
@@ -469,6 +491,6 @@
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="scripts/script.js"></script>
   </body>
 </html>
