@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="page-container">
@@ -409,6 +409,7 @@
               name="user-email-field"
               id="user-email"
               placeholder="Ваш e-mail"
+              required
             />
             <button
               class="newsletter__btn newsletter__btn--catalog btn-secondary"
@@ -526,9 +527,7 @@
               viewBox="0 0 14 14"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M14 1.29231L12.7077 0L7 5.70769L1.29231 0L0 1.29231L5.70769 7L0 12.7077L1.29231 14L7 8.29231L12.7077 14L14 12.7077L8.29231 7L14 1.29231Z"
-              />
+              <path d="M14 1.29231L12.7077 0L7 5.70769L1.29231 0L0 1.29231L5.70769 7L0 12.7077L1.29231 14L7 8.29231L12.7077 14L14 12.7077L8.29231 7L14 1.29231Z"/>
             </svg>
           </button>
           <section class="modal__content">
@@ -539,36 +538,49 @@
               class="modal__form order"
             >
               <fieldset class="order__fieldset order__fieldset--visit">
-                <label for="" class="order__label order__label--visit"
-                  >Дата заезда:
-                  <div class="order__input--date">
-                    <input
-                      type="text"
-                      class="order__input order__input--visit"
-                      name="visit"
-                      value="27 апреля 2020"
-                      placeholder="Укажите дату"
-                    />
-                  </div>
+                <label
+                  class="order__label order__label--visit"
+                  for="visit-field"
+                >
+                  Дата заезда:
                 </label>
+                    <div class="order__input--date-wrapper">
+                      <input
+                        type="text"
+                        class="order__input order__input--visit"
+                        name="visit"
+                        id="visit-field"
+                        value="27 апреля 2020"
+                        placeholder="Укажите дату"
+                        required
+                      />
+                    </div>
+                <div class="validation-container">
+                  <p class="order__validation order__validation--error">Мы не можем отправить вас в прошлое.</p>
+                </div>
               </fieldset>
               <fieldset class="order__fieldset order__fieldset--leave">
-                <label for="" class="order__label order__label--leave"
+                <label for="leave-field" class="order__label order__label--leave"
                   >Дата выезда:
-                  <div class="order__input--date">
-                    <input
-                      type="text"
-                      class="order__input order__input--leave"
-                      name="leave"
-                      value="1 сентября 2023"
-                      placeholder="Укажите дату"
-                    />
-                  </div>
                 </label>
+                    <div class="order__input--date-wrapper">
+                      <input
+                        type="text"
+                        class="order__input order__input--leave"
+                        name="leave"
+                        id="leave-field"
+                        value="1 сентября 2023"
+                        placeholder="Укажите дату"
+                        required
+                      />
+                    </div>
+                <div class="validation-container">
+                  <p class="order__validation order__validation--notification">На эти даты есть свободные номера. Пока есть.</p>
+                </div>
               </fieldset>
               <fieldset class="order__fieldset order__fieldset--visitor">
                 <div class="adult-wrapper">
-                  <label for="adult" class="order__label order__label--adult"
+                  <label for="adult-field" class="order__label order__label--adult"
                     >Взрослые:</label
                   >
                   <div class="counter-wrapper adult-counter-wrapper">
@@ -586,6 +598,7 @@
                       type="text"
                       class="order__input order__input--counter order__input--adult"
                       name="adult"
+                      id="adult-field"
                       value="2"
                     />
                     <button class="adult-counter-plus counter-button" type="button">
@@ -605,7 +618,7 @@
                     class="order__label--children order__label--children-icon"
                   >
                     <label
-                      for="children"
+                      for="children-field"
                       class="order__label order__label--children"
                       >Дети:</label
                     >
@@ -655,6 +668,7 @@
                       type="text"
                       class="order__input order__input--counter order__input--children"
                       name="children"
+                      id="children-field"
                       value="2"
                     />
                     <button class="children-counter-plus counter-button" type="button">
@@ -670,7 +684,7 @@
                   </div>
                 </div>
               </fieldset>
-              <button type="submit" class="order__btn btn-secondary">Найти</button>
+              <button class="order__btn btn-secondary">Найти</button>
             </form>
           </section>
         </div>

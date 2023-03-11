@@ -282,7 +282,7 @@ body {
   min-height: 485px;
   padding-top: 51px;
   background-color: #6b869d;
-  background-image: url(img/intro-background.jpg);
+  background-image: url(../img/intro-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   box-sizing: border-box;
@@ -295,7 +295,7 @@ body {
 
 .intro::after {
   position: absolute;
-  content: url(img/intro-decoration.svg);
+  content: url(../img/intro-decoration.svg);
   width: 1200px;
   height: 57px;
   bottom: 0;
@@ -516,15 +516,15 @@ body {
 }
 
 .features__title--housing::after {
-  content: url("img/house.svg");
+  content: url("../img/house.svg");
 }
 
 .features__title--food::after {
-  content: url("img/food.svg");
+  content: url("../img/food.svg");
 }
 
 .features__title--souvenirs::after {
-  content: url("img/souvenirs.svg");
+  content: url("../img/souvenirs.svg");
 }
 
 .features__text {
@@ -592,7 +592,7 @@ body {
   align-items: center;
   padding: 96px 50px 104px;
   background-color: #496c81;
-  background-image: url(img/subscribe-background.png);
+  background-image: url(../img/subscribe-background.jpg);
 }
 
 .newsletter__title {
@@ -768,7 +768,7 @@ body {
   padding-top: 39px;
   padding-bottom: 30px;
   background-color: #6b869d;
-  background-image: url(img/filter-background.png);
+  background-image: url(../img/filter-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   box-sizing: border-box;
@@ -911,7 +911,7 @@ body {
   height: 11px;
   left: 4px;
   top: 5px;
-  background-image: url(img/mark.svg);
+  background-image: url(../img/mark.svg);
   fill: #3f5e72;
 }
 
@@ -1216,7 +1216,7 @@ body {
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
@@ -1286,7 +1286,7 @@ body {
   width: 16px;
   height: 14px;
   margin: auto;
-  background-image: url(img/tile.svg);
+  background-image: url(../img/tile.svg);
   box-sizing: border-box;
 }
 
@@ -1296,7 +1296,7 @@ body {
   width: 16px;
   height: 14px;
   margin: auto;
-  background-image: url(img/card.svg);
+  background-image: url(../img/card.svg);
   box-sizing: border-box;
 }
 
@@ -1306,7 +1306,7 @@ body {
   width: 16px;
   height: 14px;
   margin: auto;
-  background-image: url(img/list.svg);
+  background-image: url(../img/list.svg);
   box-sizing: border-box;
 }
 
@@ -1530,9 +1530,9 @@ body {
 .modal {
   position: relative;
   width: 717px;
-  height: 576px;
+  min-height: 576px;
   margin: auto;
-  padding: 67px 70px;
+  padding: 67px 70px 64px;
   background-color: #ffffff;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
@@ -1580,53 +1580,49 @@ body {
 }
 
 .order__fieldset {
-  position: relative;
   min-height: 48px;
   margin: 0;
-  margin-bottom: 48px;
   padding: 0;
   border: none;
   box-sizing: border-box;
 }
 
-.order__fieldset--visit::after {
-  display: block;
-  position: absolute;
-  content: "Мы не можем отправить вас в прошлое.";
-  top: 52px;
-  left: 157px;
-  font-size: 16px;
-  line-height: 21px;
-  color: #ff5757;
-  box-sizing: border-box;
+.order__fieldset--visit,
+.order__fieldset--leave {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.order__fieldset--leave::after {
-  display: block;
-  position: absolute;
-  content: "На эти даты есть свободные номера. Пока есть.";
-  top: 52px;
-  left: 157px;
+.order__fieldset--visitor {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.order__label {
+  margin: 0;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.validation-container {
+  padding: 4px 20px 23px 157px;
+}
+
+.order__validation {
+  margin: 0;
   font-size: 16px;
   line-height: 21px;
   color: #333333;
   box-sizing: border-box;
 }
 
-.order__fieldset--visitor {
-  display: flex;
-  justify-content: space-between;
-}
-
-.order__label {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 700;
-  text-transform: capitalize;
+.order__validation--error {
+  color: #FF5757;
 }
 
 .order__label--adult {
@@ -1653,31 +1649,8 @@ body {
   box-sizing: border-box;
 }
 
-.order__input--date {
-  position: relative;
-}
-
-.order__input--date::after {
-  position: absolute;
-  display: block;
-  content: "";
-  width: 20px;
-  height: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 20px;
-  background-image: url("img/calendar.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  box-sizing: border-box;
-}
-
 .order__input::placeholder {
   color: rgba(0, 0, 0, 0.3);
-}
-
-.order__input:hover {
-  background-color: #e6e6e6;
 }
 
 .order__input:focus {
@@ -1691,6 +1664,30 @@ body {
   border-radius: 4px;
   box-sizing: border-box;
   color: #000000;
+}
+
+.order__input--date-wrapper {
+  position: relative;
+}
+
+.order__input--date-wrapper::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  background-image: url("../img/calendar.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.order__input--visit:hover,
+.order__input--leave:hover {
+  background-color: #e6e6e6;
 }
 
 .order__input--visit:focus,
@@ -1733,12 +1730,15 @@ body {
   color: #000000;
 }
 
-.counter-wrapper:focus-within:not(.counter-button:focus) {
+.counter-wrapper:focus-within {
   outline: 3px solid #83b3d3;
   border-radius: 4px;
 }
 
-.counter-wrapper:hover button {
+.adult-wrapper:hover .counter-button,
+.adult-wrapper:hover input,
+.children-wrapper:hover .counter-button,
+.children-wrapper:hover input {
   background-color: #e5e5e5;
 }
 
@@ -1859,6 +1859,14 @@ body {
   color: #ffffff;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
+}
+
+.tooltip__btn:hover ~ .tooltip__text{
+  display: block;
+}
+
+.tooltip__btn:focus ~ .tooltip__text{
+  display: block;
 }
 
 .tooltip__text::after {
