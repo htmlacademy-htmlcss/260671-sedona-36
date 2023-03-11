@@ -15,10 +15,6 @@
   font-display: swap;
 }
 
-html {
-  height: 100%;
-}
-
 body {
   height: 100%;
   display: flex;
@@ -141,6 +137,7 @@ body {
 
 .main-logo:focus {
   outline: none;
+  opacity: 0.8;
 }
 
 .main-navigation {
@@ -482,35 +479,22 @@ body {
 }
 
 .features__item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  max-width: 400px;
+  min-height: 385px;
   padding-left: 85px;
   padding-right: 85px;
-}
-
-.features-item-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 230px;
-  height: 223px;
+  background-color: rgba(131, 179, 211, 0.12);
   box-sizing: border-box;
 }
 
-.features__item--primary {
-  background-color: #82b3d3;
-  color: #ffffff;
-}
-
-.features__item--secondary {
-  background-color: rgba(131, 179, 211, 0.12);
+.features__item--light {
+  background-color: #ffffff;
 }
 
 .features__title {
+  position: relative;
   margin: 0;
+  margin-top: 183px;
   margin-bottom: 30px;
   font-size: 24px;
   line-height: 28px;
@@ -520,8 +504,32 @@ body {
   color: inherit;
 }
 
+.features__title::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 75px;
+  height: 72px;
+  top: -105px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.features__title--housing::after {
+  content: url("img/house.svg");
+}
+
+.features__title--food::after {
+  content: url("img/food.svg");
+}
+
+.features__title--souvenirs::after {
+  content: url("img/souvenirs.svg");
+}
+
 .features__text {
   margin: 0;
+  margin-bottom: 20px;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
@@ -539,6 +547,7 @@ body {
 /* OFFER */
 
 .offer {
+  padding: 70px;
   min-height: 406px;
   display: flex;
   flex-direction: column;
@@ -559,7 +568,7 @@ body {
 }
 
 .offer__text {
-  max-width: 650px;
+  /* max-width: 650px; */
   margin: 0;
   margin-bottom: 54px;
   font-size: 22px;
@@ -600,7 +609,6 @@ body {
 .newsletter__text {
   margin: 0;
   margin-bottom: 54px;
-  width: 480px;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
@@ -794,6 +802,11 @@ body {
 
 .filter__breadcrumbs-link:focus {
   outline: none;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.filter__breadcrumbs-link:focus svg {
+  fill: rgba(255, 255, 255, 0.3);
 }
 
 .filter__breadcrumbs-link--main {
@@ -1031,9 +1044,10 @@ body {
   outline: 3px solid #83b3d3;
 }
 
-.price__input:focus-within {
+.price__input:focus.price__input:not(:placeholder-shown) {
   border: 2px solid #000000;
   padding: 11px 18px 9px;
+  outline: none;
 }
 
 .price__input--from {
@@ -1079,6 +1093,7 @@ body {
 
 .slider__pin:hover {
   background-color: #e5e5e5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .slider__pin:focus {
@@ -1086,7 +1101,8 @@ body {
 }
 
 .slider__pin:active {
-
+  outline: 2px solid #83b3d3;
+  background-color: #ffffff;
 }
 
 .slider__start-pin {
@@ -1248,6 +1264,10 @@ body {
   border-radius: 4px;
 }
 
+.products__view--btn--current {
+  border-color: #000000;
+}
+
 .products__view--btn:hover {
   border-color: #000000;
 }
@@ -1311,6 +1331,8 @@ body {
     "detail favorite"
     "star rating";
   gap: 16px 20px;
+  align-content: start;
+  align-items: start;
   width: 340px;
   padding: 20px;
   outline: 1px solid #e6e6e6;
@@ -1324,6 +1346,7 @@ body {
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
+  hyphens: auto;
 }
 
 .product-card__img {
@@ -1331,14 +1354,17 @@ body {
 }
 
 .product-card__housing {
+  max-width: 140px;
   font-size: 18px;
   line-height: 21px;
+  hyphens: auto;
 }
 
 .product-card__detail,
 .product-card__favorite {
   width: 140px;
   box-sizing: border-box;
+  hyphens: auto;
 }
 
 .product-card__price {
@@ -1346,6 +1372,7 @@ body {
   justify-self: flex-end;
   font-size: 18px;
   line-height: 21px;
+  hyphens: auto;
 }
 
 .product-card__stars {
@@ -1669,6 +1696,13 @@ body {
 .order__input--visit:focus,
 .order__input--leave:focus {
   outline: 3px solid #83b3d3;
+}
+
+.order__input--visit:focus.order__input--visit:not(:placeholder-shown),
+.order__input--leave:focus.order__input--leave:not(:placeholder-shown) {
+  border: 2px solid #000000;
+  padding: 11px 18px 9px;
+  outline: none;
 }
 
 .adult-wrapper {
