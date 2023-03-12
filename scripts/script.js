@@ -52,9 +52,8 @@ const starContainers = document.querySelectorAll(".product-card__stars");
 
 const elementCreator = (findedElement, starCount) => {
   for (let i = 0; i < starCount; i++) {
-    let element = document.createElement("img");
+    let element = document.createElement("span");
     element.classList.add("product-card__star");
-    element.src = "img/star.svg";
     findedElement.appendChild(element);
   }
 };
