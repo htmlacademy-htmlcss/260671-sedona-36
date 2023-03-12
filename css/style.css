@@ -1331,8 +1331,8 @@ body {
 .product-card {
   display: grid;
   grid-template-areas:
-    "img img"
-    "title title"
+    "link link"
+    "link link"
     "housing price"
     "detail favorite"
     "star rating";
@@ -1346,17 +1346,25 @@ body {
   box-sizing: border-box;
 }
 
+.product-card__link {
+  grid-area: link;
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: none;
+}
+
 .product-card__title {
-  grid-area: title;
   margin: 0;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
+  color: #000000;
   hyphens: auto;
 }
 
 .product-card__img {
-  grid-area: img;
+  order: -1;
+  margin-bottom: 16px;
 }
 
 .product-card__housing {
